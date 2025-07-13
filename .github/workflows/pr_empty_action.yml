@@ -1,0 +1,17 @@
+name: Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'spring/**'
+      - '*/**'
+      - 'spring/**/**/**'
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
